@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Oficial</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Iconos.css">
+    <link rel="stylesheet" href="css/imgs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Icono de menú para móviles -->
+
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        <div class="logo">
+            <img src="img/imgIcons/Logo.png" alt="Logo de la Empresa">
+            <h1>Company</h1>
+        </div>
+        <nav>
+            <ul id="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            
+            <div class="social-icons">
+                <a href="#cuenta"><i class="fas fa-user"><img src="img/imgIcons/iconoCuenta.png"></i></a>
+                <a href="#me-gusta"><i class="fas fa-heart"><img src="img/imgIcons/iconoCorazon.png"></i></a>
+                <a href="#buscar"><i class="fas fa-search"><img src="img/imgIcons/iconoBuscar.png"></i></a>
+                <a href="#carrito"><i class="fas fa-shopping-cart"><img src="img/imgIcons/iconoCarrito.png"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="hero">
+        <h1>Bienvenidos a Company</h1>
+        <p>Descubre los mejores productos al precio que mereces.</p>
+        <a href="#productos" class="btn-cta">Ver Productos</a>
+    </section>
+
+    <!-- Sección de Productos -->
+    <section id="productos" class="productos">
+        <h2 class="subttlo">Nuestros Productos</h2>
+        <div class="productos-container">
+            <div class="producto">
+                <img class="img1" src="img/imgRopa/Pantalon.jpg" alt="Producto 1">
+                <h3>Producto 1</h3>
+                <p>Alta calidad y diseño exclusivo.</p>
+                <button>Comprar Ahora</button>
+            </div>
+            <div class="producto">
+                <img class="img2" src="img/imgRopa/Polo.jpg" alt="Producto 2">
+                <h3>Producto 2</h3>
+                <p>Innovación al alcance de tu mano.</p>
+                <button>Comprar Ahora</button>
+            </div>
+            <div class="producto">
+                <img class="img3" src="img/imgRopa/Zapatilla.jpg" alt="Producto 3">
+
+                <h3>Producto 3</h3>
+                <p>Ideal para cualquier ocasión.</p>
+                <button>Comprar Ahora</button>
+            </div>
+            <div class="producto">
+                <img class="img4" src="img/imgRopa/Pantalon2.jpg" alt="Producto 1">
+                <h3>Producto 4</h3>
+                <p>Alta calidad y diseño exclusivo.</p>
+                <button>Comprar Ahora</button>
+            </div>
+            <div class="producto">
+                <img class="img5" src="img/imgRopa/Polo2.jpg" alt="Producto 2">
+                <h3>Producto 5</h3>
+                <p>Innovación al alcance de tu mano.</p>
+                <button>Comprar Ahora</button>
+            </div>
+            <div class="producto">
+                <img class="img6" src="img/imgRopa/Zapatilla2.jpg" alt="Producto 3">
+
+                <h3>Producto 6</h3>
+                <p>Ideal para cualquier ocasión.</p>
+                <button>Comprar Ahora</button>
+            </div>
+            <div class="producto">
+                <img class="img7" src="img/imgRopa/Polo3.jpg" alt="Producto 2">
+                <h3>Producto 7</h3>
+                <p>Innovación al alcance de tu mano.</p>
+                <button>Comprar Ahora</button>
+            </div>
+            <div class="producto">
+                <img class="img8" src="img/imgRopa/Zapatilla3.jpg" alt="Producto 3">
+
+                <h3>Producto 8</h3>
+                <p>Ideal para cualquier ocasión.</p>
+                <button>Comprar Ahora</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una empresa comprometida con la innovación, calidad y satisfacción de nuestros clientes. Desde nuestros
+            inicios, nos hemos dedicado a ofrecer productos únicos que marcan la diferencia.</p>
+        <div class="valores">
+            <div>
+                <h3>Misión</h3>
+                <p>Brindar productos que transformen la vida de nuestros clientes.</p>
+            </div>
+            <div>
+                <h3>Visión</h3>
+                <p>Ser líderes en el mercado de ventas online en América Latina.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contactos -->
+
+    <section id="contacto" class="contacto">
+        <h2>Contáctanos</h2>
+        <form action="#" method="post">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Tu número de contacto">
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+    <!-- Ícono de WhatsApp flotante -->
+    <div id="whatsapp-icon" class="whatsapp-icon">
+        <a href="https://wa.me/tuNumeroDeWhatsApp" target="_blank">
+            <img src="img/imgIcons/whatsapp_3670051.png" alt="WhatsApp">
+        </a>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Empresa de Ventas. Todos los derechos reservados.</p>
+        <p>Contacto: contacto@empresa.com | Teléfono: +51 123 456 789</p>
+
+        <!-- Iconos de redes sociales -->
+        <div class="social-footer">
+            <a href="https://www.facebook.com/tuPerfil" target="_blank">
+                <img src="img/imgIcons/facebook_5968764.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com/tuPerfil" target="_blank">
+                <img src="img/imgIcons/logotipos.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/tuPerfil" target="_blank">
+                <img src="img/imgIcons/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://t.me/tuUsuarioTelegram" target="_blank">
+                <img src="img/imgIcons/telegrama.png" alt="Telegram">
+            </a>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

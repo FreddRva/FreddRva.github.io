@@ -1,0 +1,450 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #0267d3, #007BFF);
+    color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    max-width: 1550px;
+    z-index: 1000;
+    margin: 0;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 15px;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/*Menu nav*/
+header nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin-left: 30px;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    perspective: 1000px;
+}
+
+#menu li {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-in-out;
+}
+
+#menu li:hover {
+    transform: rotateY(15deg) scale(1.2);
+}
+
+#menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    display: block;
+    font-size: 20px;
+    transform: translateZ(0);
+}
+
+#menu li a:hover {
+    color: #FFD700;
+    text-decoration: none;
+    filter: brightness(1.2);
+    transform: translateZ(15px) rotateY(10deg);
+}
+
+
+/* Iconos sociales */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.social-icons a img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(2.1);
+    filter: brightness(1.2);
+}
+
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #007BFF, #0267d3);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.btn-cta {
+    background: #FFD700;
+    color: #333;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-cta:hover {
+    background: #dba504;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Productos */
+.productos {
+    padding: 3rem 5%;
+    text-align: center;
+
+}
+
+.subttlo {
+    margin-bottom: 3rem;
+}
+
+.productos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.producto {
+    position: relative;
+    text-align: center;
+    background: #007BFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15),
+        0 2px 6px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem;
+    overflow: hidden;
+    max-width: 300px;
+    color: white;
+}
+
+/* Efecto hover en el producto */
+.producto:hover {
+    background-color: #e79999;
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25),
+        0 4px 10px rgba(0, 0, 0, 0.20);
+}
+
+/* Estilo para las imágenes */
+.producto img {
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15),
+        0 2px 6px rgba(0, 0, 0, 0.10);
+    transform: scale(1) rotate(0deg);
+}
+
+/* Efecto hover en las imágenes */
+.producto:hover img {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25),
+        0 4px 10px rgba(0, 0, 0, 0.20);
+    filter: brightness(1.1);
+}
+/* Efecto en las imágenes cuando se hace hover */
+.img1:hover,
+.img2:hover,
+.img3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2),
+        0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo de los botones */
+.producto button {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.producto button:hover {
+    background: linear-gradient(45deg, #feb47b, #ff7e5f);
+    transform: scale(1.1);
+}
+
+/* Mejoras en los botones */
+button {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #feb47b, #ff7e5f);
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 5%;
+    font-size: 0.9rem;
+}
+
+/* Sección Nosotros */
+.nosotros {
+    padding: 2rem 5%;
+    text-align: center;
+    background-color: #b9b8b8;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nosotros h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.nosotros p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.valores {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.valores div {
+    width: 100%;
+    max-width: 250px;
+}
+
+.valores h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.valores p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Sección Contacto */
+.contacto {
+    padding: 4rem 5%;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+}
+
+.contacto h2 {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 2rem;
+}
+
+.contacto form {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contacto label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.contacto input,
+.contacto textarea {
+    resize: none;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.contacto input:focus,
+.contacto textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.contacto button {
+    background: linear-gradient(45deg, #007BFF, #00aaff);
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.contacto button:hover {
+    background: linear-gradient(45deg, #00aaff, #007BFF);
+    transform: scale(1.05);
+}
+
+/* Ocultar Menu icono */
+.menu-icon {
+    display: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    section#contacto form {
+        padding: 1.5rem;
+    }
+
+}
+
+/* Media Query para pantallas de 768px o menos */
+@media screen and (max-width: 768px) {
+
+    /* Ocultar el menú por defecto */
+    nav ul#menu {
+        display: none;
+        flex-direction: column;
+        background-color: #006ad4(30, 83, 136, 0.8);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 97px;
+        left: 0;
+        width: 20%;
+        padding: 0;
+        margin: 0;
+        border-radius: 0 0 5px 0;
+    }
+    nav ul#menu.active {
+        display: flex;
+    }
+
+    nav ul#menu li {
+        text-align: center;
+        padding: 1px;
+    }
+
+    nav ul#menu li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+    }
+
+    #menu li:hover {
+        transform: none; 
+    }
+
+    /* Icono del menú */
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        margin-top: -8px;
+        padding: 10px;
+    }
+
+    /* Logo */
+    .logo h1 {
+        display: none;
+    }
+
+    /* Header */
+    header {
+        padding: 1rem 2%;
+    }
+
+    .productos {
+        padding: 3rem 17%;
+        text-align: center;
+    }
+}
+
+/* Añadir espacio extra en la parte superior del desplazamiento */
+html {
+    scroll-behavior: smooth; /* Para que el desplazamiento sea suave */
+}
+
+body {
+    scroll-padding-top: 85px; /* Ajusta el valor según el alto de la barra de navegación */
+}
+
+#contacto {
+    scroll-margin-top: 85px; /* Esto asegura que la sección de contacto no quede cubierta */
+}
+
+#inicio {
+    scroll-margin-top: 85px;
+}
+
+#productos {
+    scroll-margin-top: 85px; 
+}
+
+#nosotros {
+    scroll-margin-top: 85px; 
+}

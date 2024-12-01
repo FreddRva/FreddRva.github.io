@@ -1,0 +1,41 @@
+/* Estilo para el ícono flotante de WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 10px; /* Distancia desde el fondo */
+    right: 15px;  /* Distancia desde la derecha */
+    z-index: 9999; /* Asegura que el ícono se muestre encima de otros elementos */
+}
+
+.whatsapp-icon img {
+    width: 50px;  /* Tamaño del ícono */
+    height: 50px; /* Tamaño del ícono */
+    border-radius: 50%; /* Hacer el ícono redondo */
+    background-color: #25d366; /* Fondo verde de WhatsApp */
+    padding: 10px; /* Espaciado alrededor del ícono */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    transition: transform 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Agregar efecto al pasar el ratón por encima */
+.whatsapp-icon:hover img {
+    transform: scale(1.1); /* Agrandar el ícono cuando el cursor pasa por encima */
+}
+/* Estilo para los iconos de redes sociales en el footer */
+.social-footer {
+    display: flex;              /* Usar flexbox para alinear los íconos */
+    justify-content: center;    /* Centrar los íconos horizontalmente */
+    gap: 20px;                  /* Espaciado entre los iconos */
+    margin-top: 20px;           /* Separar los iconos del texto superior */
+}
+
+.social-footer a img {
+    width: 40px;                /* Tamaño de los iconos */
+    height: 40px;               /* Tamaño de los iconos */
+    border-radius: 50%;         /* Hacer los iconos redondos */
+    transition: transform 0.3s ease-in-out; /* Transición suave al pasar el cursor */
+}
+
+.social-footer a img:hover {
+    transform: scale(1.2);      /* Aumentar el tamaño del icono cuando se pase el cursor */
+}
+
